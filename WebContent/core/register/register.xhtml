@@ -1,0 +1,90 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="/resources/templates/#{coreInfo.decorator}/decorator.xhtml">
+
+	<ui:define name="title">		
+		<h:outputText value="#{msgsCore['register.title']}" rendered="#{not registerController.spiritist.active }"/>
+		<h:outputText value="#{msgsCore['register.title.activate']}" rendered="#{registerController.spiritist.active}"/>
+	</ui:define>
+
+	<ui:define name="body">
+		<h1>
+			<h:outputText value="#{msgsCore['register.title']}" rendered="#{not registerController.spiritist.active }"/>
+			<h:outputText value="#{msgsCore['register.title.activate']}" rendered="#{registerController.spiritist.active}"/>
+		</h1>
+		<p>
+			<h:outputText value="#{msgsCore['register.text.instructions.registrationActivation']}" rendered="#{registerController.spiritist.active}"/>
+		</p>
+		
+		<div class="crud">
+			<ui:decorate template="/resources/templates/#{coreInfo.decorator}/form.xhtml">
+				<h:form id="form">
+					<h:panelGroup id="nameField" rendered="#{not egisterController.spiritist.active}">
+						<ui:decorate template="/resources/templates/#{coreInfo.decorator}/formfield.xhtml">
+							<ui:param name="fieldName" value="form:name" />
+							<ui:param name="tooltip" value="#{msgsCore['register.form.name.tooltip']}" />
+							<ui:define name="label"><h:outputText value="#{msgsCore['register.form.name']}" /></ui:define>
+							<p:inputText id="name" value="#{registerController.spiritist.name}" size="50" required="true" />
+							<strong>
+								<h:outputText value="#{msgsCore['register.text.active']}" rendered="#{registerController.spiritist.active}" />								
+							</strong>
+						</ui:decorate>
+					</h:panelGroup>
+					
+					<h:panelGroup id="taxCodeField">
+						<ui:decorate template="/resources/templates/#{coreInfo.decorator}/formfield.xhtml">
+							<ui:param name="fieldName" value="form:taxCode" />
+							<ui:param name="tooltip" value="#{msgsCore['register.form.taxCode.tooltip']}" />
+							<ui:define name="label"><h:outputText value="#{msgsCore['register.form.taxCode']}" /></ui:define>
+							<p:inputMask id="taxCode" mask="#{msgs['format.taxCode.primefaces']}" value="#{registerController.spiritist.taxCode}" size="20" required="#{manageSpiritistsController.selectedEntity.active}">
+								<f:validator validatorId="sigmeTaxCodeValidator" />
+								<p:ajax event="blur" update="taxCodeField" />
+							</p:inputMask>
+							<h:outputText value=" (#{msgs['format.taxCode.label']})" />
+						</ui:decorate>
+					</h:panelGroup>
+					
+					<h:panelGroup id="shortNameField" rendered="#{not egisterController.spiritist.active}">
+						<ui:decorate template="/resources/templates/#{coreInfo.decorator}/formfield.xhtml">
+							<ui:param name="fieldName" value="form:shortName" />
+							<ui:define name="label"><h:outputText value="#{msgsCore['register.form.shortName']}" /></ui:define>
+							<p:inputText id="shortName" value="#{registerController.spiritist.shortName}" size="10" required="true">
+								<p:ajax event="blur" update="shortNameField" />
+							</p:inputText>
+						</ui:decorate>
+					</h:panelGroup>
+
+					<h:panelGroup id="passwordField">
+						<ui:decorate template="/resources/templates/#{coreInfo.decorator}/formfield.xhtml">
+							<ui:param name="fieldName" value="form:password" />
+							<ui:define name="label"><h:outputText value="#{msgsCore['register.form.password']}" /></ui:define>
+							<p:password id="password" value="#{registerController.spiritist.password}" match="form:password2" required="true">
+							</p:password>
+						</ui:decorate>
+					</h:panelGroup>
+					
+					<h:panelGroup id="password2Field">
+						<ui:decorate template="/resources/templates/#{coreInfo.decorator}/formfield.xhtml">
+							<ui:param name="fieldName" value="form:password2" />
+							<ui:define name="label"><h:outputText value="#{msgsCore['register.form.passwordConfirm']}" /></ui:define>
+							<p:password id="password2" value="#{registerController.spiritist.password}" required="true">
+							</p:password>
+						</ui:decorate>
+					</h:panelGroup>
+					
+					<ui:decorate template="/resources/templates/#{coreInfo.decorator}/formbutton.xhtml">
+							<p:commandButton action="#{registerController.save}" value="#{msgs['crud.button.save']}" icon="buttonOk" update=":form :globalMessages" />
+					</ui:decorate>
+				</h:form>
+			</ui:decorate>
+		</div>
+	</ui:define>
+	
+	<ui:define name="help">
+		
+	</ui:define>
+</ui:composition>
