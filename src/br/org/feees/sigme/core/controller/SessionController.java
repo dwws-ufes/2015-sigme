@@ -216,16 +216,24 @@ public class SessionController extends JSFController {
 				item = new DefaultMenuItem();
 				item.setValue(getI18nMessage("msgsCore", "core.menu.cruds.spiritist.manageRegister"));
 				item.setUrl("/core/spiritist/manage/form.faces");
+<<<<<<< HEAD
+=======
+				//item.setCommand("#{manageRegisterSpiritistController.onPageLoad}");
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 				menu.addElement(item);
 				
 				item = new DefaultMenuItem();
 				item.setValue(getI18nMessage("msgsCore", "core.menu.cruds.spiritist.deactivate"));
 				item.setUrl("/core/register/deactivate.faces");
+<<<<<<< HEAD
 				menu.addElement(item);
 				
 				item = new DefaultMenuItem();
 				item.setValue(getI18nMessage("msgsCore", "core.menu.cruds.rdf"));
 				item.setUrl("/core/rdf/cities.faces");
+=======
+				//item.setCommand("#{manageRegisterSpiritistController.onPageLoad}");
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 				menu.addElement(item);
 				
 

@@ -23,7 +23,11 @@
 		<div class="crud">
 			<ui:decorate template="/resources/templates/#{coreInfo.decorator}/form.xhtml">
 				<h:form id="form">
+<<<<<<< HEAD
 					<h:panelGroup id="nameField" rendered="#{not registerController.spiritist.active}">
+=======
+					<h:panelGroup id="nameField" rendered="#{not egisterController.spiritist.active}">
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 						<ui:decorate template="/resources/templates/#{coreInfo.decorator}/formfield.xhtml">
 							<ui:param name="fieldName" value="form:name" />
 							<ui:param name="tooltip" value="#{msgsCore['register.form.name.tooltip']}" />

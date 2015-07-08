@@ -10,4 +10,9 @@
   <installed facet="jst.jsf" version="2.0"/>
   <installed facet="jst.jaxrs" version="1.1"/>
   <installed facet="java" version="1.8"/>
+<<<<<<< HEAD
+=======
+  <installed facet="jst.cdi" version="1.0"/>
+  <installed facet="jboss.m2" version="1.0"/>
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 </faceted-project>

@@ -6,6 +6,14 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
+<<<<<<< HEAD
+=======
+			<name>tern.eclipse.ide.core.ternBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 			<name>org.eclipse.wst.jsdt.core.javascriptValidator</name>
 			<arguments>
 			</arguments>
@@ -26,7 +34,11 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+<<<<<<< HEAD
 			<name>org.eclipse.wst.validation.validationbuilder</name>
+=======
+			<name>org.jboss.tools.cdi.core.cdibuilder</name>
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -35,6 +47,14 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+<<<<<<< HEAD
+=======
+		<buildCommand>
+			<name>org.eclipse.wst.validation.validationbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
@@ -45,5 +65,9 @@
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 		<nature>org.jboss.tools.jst.web.kb.kbnature</nature>
 		<nature>org.jboss.tools.jsf.jsfnature</nature>
+<<<<<<< HEAD
+=======
+		<nature>org.jboss.tools.cdi.core.cdinature</nature>
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 	</natures>
 </projectDescription>

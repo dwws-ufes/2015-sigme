@@ -10,6 +10,10 @@
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+<<<<<<< HEAD
+=======
+			<attribute name="owner.project.facets" value="jboss.m2"/>
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 8.x Runtime">
@@ -17,9 +21,15 @@
 			<attribute name="owner.project.facets" value="jst.web;jpt.jpa;jst.jsf"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 8 [1.8.0]">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+>>>>>>> 9273a6cfc4e1f411ad35b85685b37ba1984e2337
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
